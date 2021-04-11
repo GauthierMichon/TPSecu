@@ -28,7 +28,7 @@ namespace TPSecu.Controllers
                     var filePath = Path.Combine(Directory.GetCurrentDirectory(), formFile.FileName);
                     filePaths.Add(filePath);
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    using (var stream = new FileStream("wwwroot", FileMode.Create))
                     {
                         await formFile.CopyToAsync(stream);
 
